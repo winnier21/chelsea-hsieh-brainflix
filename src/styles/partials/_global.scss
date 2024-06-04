@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "typography" as *;
+
+* {
+  box-sizing: border-box;
+  font-family: "AvenirNext LT Pro";
+  margin:0;
+  padding:0;
+}
+
+
+html {
+  font-size: 16px;
+}
