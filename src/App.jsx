@@ -1,9 +1,14 @@
 import React from 'react'
-import './App.scss'
+import Navbar from './components/Navbar/Navbar'
+// import './App.scss'
 
 function App() {
   return (
-    <div>App</div>
+    <>
+    <Navbar />
+
+
+</>
   )
 }
 
