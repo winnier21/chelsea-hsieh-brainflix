@@ -1,4 +1,14 @@
 @use "typography" as *;
 
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1280px;
+$tablet-breakpoint: 48remx;
+$desktop-breakpoint: 80rem;
+
+$primary-black: #323232;
+$primary-blue:#0095FF;
+$primary-grey:#AFAFAF;
+$primary-white: #FFFFFF;
+$secondary-darkblack:#000000;
+$secondary-darkblue:#0065AD;
+$secondary-lightgrey:#E1E1E1;
+$secondary-whitegrey: #FAFAFA;
+
