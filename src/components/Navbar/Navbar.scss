@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+
+    &__logo {
+        height: 40px;
+        margin-right: auto;
+    }
+
+    &__search {
+        flex: 1;
+        padding: 5px 10px;
+        margin: 0 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    &__upload {
+        padding: 10px 20px;
+        margin-right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    &__avatar {
+        height: 40px;
+        border-radius: 50%;
+    }
+}

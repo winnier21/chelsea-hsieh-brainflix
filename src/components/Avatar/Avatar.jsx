@@ -1,9 +1,8 @@
-import React from 'react'
+// import "./Avatar.css";
+// import avatar from "../../assets/Images/Mohan-muruge.jpg";
 
-function Avatar() {
-  return (
-    <div>Avatar</div>
-  )
-}
+// function Avatar() {
+//   return <img className="avatar" src={avatar} alt="avatar" />;
+// }
 
-export default Avatar
+// export default Avatar;
