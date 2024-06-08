@@ -1,38 +1,80 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
 .navbar {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: $primary-white;
+  padding: $padding-xsmall;
+
+  &__logo {
+    height: 1.5rem;
+    margin: rem;
+  }
+  &__container {
     display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
+    margin: 0.7rem 0rem;
+  }
 
-    &__logo {
-        height: 40px;
-        margin-right: auto;
+  &__search {
+    display: flex;
+    width: 8rem;
+    padding: 0.3125rem 0.625rem;
+    border: none;
+    background-color: $secondary-whitegrey;
+    font-size: 0.8rem;
+
+    &--icon {
+      max-width: 1rem;
     }
 
-    &__search {
-        flex: 1;
-        padding: 5px 10px;
-        margin: 0 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+    &--container {
+      display: flex;
+      border: 0.0625rem solid $secondary-lightgrey;
+      border-radius: $border-radius;
+      width: 15rem;
+      background-color: $secondary-whitegrey;
+      padding: 0.3rem 1rem;
+    }
+  }
+  &__avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 25% 25%;
+    margin-left: 1rem;
+
+    &--container {
+      display: flex;
+    }
+  }
+
+  &__upload {
+    font-size: 0.8rem;
+    background-color: transparent;
+    color: $primary-white;
+    border: 0;
+    flex-grow: 1;
+
+    &--container {
+      display: flex;
+      padding: 0.7rem 0 0.7rem 0.5rem;
+      margin: 1rem 0;
+      background-color: $primary-blue;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary-darkblue;
+      }
     }
 
-    &__upload {
-        padding: 10px 20px;
-        margin-right: 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #0056b3;
-        }
+    &--icon {
+      max-width: 1.2rem;
     }
-
-    &__avatar {
-        height: 40px;
-        border-radius: 50%;
-    }
+  }
 }
