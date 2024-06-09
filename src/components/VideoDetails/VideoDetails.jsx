@@ -5,8 +5,8 @@ import viewsIcon from '../../assets/Icons/views.svg';
 
 
 const VideoDetails = ({ videoData }) => {
-  const { title, channel, timestamp, views, likes, description } = videoData;
-
+  const { title, channel, timestamp, views, likes, description, comments } = videoData;
+  
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
     const day = date.getDate();
@@ -47,6 +47,7 @@ const VideoDetails = ({ videoData }) => {
         </div>
       </div>
       <p className="video-details__description">{description}</p>
+      <h2 className="comment-title">{comments.length} Comments</h2>
     </div>
   );
 };

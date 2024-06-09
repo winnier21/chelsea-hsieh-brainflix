@@ -11,7 +11,9 @@ const Comment = ({ comments }) => {
   };
 
   return (
+    
     <div>
+      
       {comments.map((comment) => (
         <div key={comment.id} className="comment">
           <div className="comments-avatar"></div>

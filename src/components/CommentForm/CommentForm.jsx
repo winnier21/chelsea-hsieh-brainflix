@@ -6,6 +6,7 @@ import commentIcon from '../../assets/Icons/add_comment.svg';
 
 const CommentForm =() => {
   return (
+    
     <form className='comment-form'>
         <div >
             <img className='comment-form__avatar' src={avatar} alt="avatar"/>
