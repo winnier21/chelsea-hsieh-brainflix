@@ -11,15 +11,17 @@ const Comment = ({ comments }) => {
   };
 
   return (
-    
     <div>
-      
       {comments.map((comment) => (
         <div key={comment.id} className="comment">
-          <div className="comments-avatar"></div>
-          <p className="comment-name">{comment.name}</p>
-          <span className="comment-date">{formatDate(comment.timestamp)}</span>
-          <p className="comment-text">{comment.comment}</p>
+          <div className="comment__avatar"></div>
+          <div className="comment__outer">
+          <div className="comment__container">
+          <p className="comment__name">{comment.name}</p>
+          <span className="comment__date">{formatDate(comment.timestamp)}</span>
+          </div>
+          <p className="comment__text">{comment.comment}</p>
+          </div>
         </div>
       ))}
     </div>

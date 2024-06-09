@@ -3,13 +3,36 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
+.comment{
+    margin:$padding-small;
+    display: flex;
+    border-bottom: 1px solid $secondary-lightgrey;
+    &__avatar{
+        height: 2.5rem;
+        width: 2.5rem;
+        object-fit: cover;
+        border-radius: 50%;
+        object-position: 25% 25%;
+       
+        background-color: $secondary-lightgrey;
+}
+&__container{
+    display: flex;
+    
+}
+&__outer{
+    width: 85%;
+    padding-left:$padding-small;
+    padding-bottom: $padding-small;
+}
+&__name{
+color: $primary-black;
+font-weight: 600;
+flex-grow:1;
+margin-bottom: $padding-xsmall;
 
-.comments-avatar{
-    height: 2.5rem;
-    width: 2.5rem;
-    object-fit: cover;
-    border-radius: 50%;
-    object-position: 25% 25%;
-    margin-left: 1rem;
-    background-color: $secondary-lightgrey;
+}
+&__date{
+    color: $primary-grey;
+}
 }
