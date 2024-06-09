@@ -4,13 +4,23 @@
 @use "../../styles/partials/variables" as *;
 
 .comment-form {
+  display: flex;
+  border-bottom: 1px solid $secondary-lightgrey;
+  margin: 0 $padding-small;
+
   &__avatar {
     height: 2.5rem;
     width: 2.5rem;
     object-fit: cover;
     border-radius: 50%;
     object-position: 25% 25%;
-    margin-left: 1rem;
+    
+  }
+  &__left{
+    padding-top:1.5rem;
+  }
+  &__right{
+    padding-left: 1rem;
   }
   &__button {
     display: flex;
@@ -24,18 +34,35 @@
     &:hover {
       background-color: $secondary-darkblue;
     }
+  }
+  &__label {
+    color: $primary-grey;
+    font-weight: 600;
     
-    &--trigger {
-        font-size: 0.8rem;
-        background-color: transparent;
-        color: $primary-white;
-        border: 0;
-        flex-grow: 1;
-      }
-    &--icon {
-      max-width: 1.2rem;
-
+  }
+  &__textarea {
+    margin-top:0.4rem;
+    position: relative;
+    height: 6rem;
+    width: 100%;
+    font-size: 0.8rem;
+    background-color: $secondary-whitegrey;
+    border-radius: $border-radius;
+    border: 1px solid $secondary-lightgrey;
+    
+    &::placeholder{
+      color: $primary-black;
+      padding:0.8rem;
     }
-    
+  }
+  &__trigger {
+    font-size: 0.8rem;
+    background-color: transparent;
+    color: $primary-white;
+    border: 0;
+    flex-grow: 1;
+  }
+  &__icon {
+    max-width: 1.2rem;
   }
 }
