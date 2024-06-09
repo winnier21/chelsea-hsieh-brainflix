@@ -4,21 +4,30 @@ import likesIcon from '../../assets/Icons/likes.svg';
 import viewsIcon from '../../assets/Icons/views.svg';
 
 
-const VideoDetails =({videoData}) => {
-    const {title, channel, timestamp, views, likes, description} = videoData;
-  return(
-    <div className="video-details section-wrapper">
+const VideoDetails = ({ videoData }) => {
+  const { title, channel, timestamp, views, likes, description } = videoData;
+
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    const day = date.getDate();
+    const month = date.getMonth() + 1; // Months are zero-indexed
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
+  };
+
+  return (
+    <div className="video-details">
       <h1 className="video-details__title">{title}</h1>
-      <div className="video-details__metadata">
-        <div className="video-details__metadata--left">
-          <div className="video-details__author">
+      <div className="video-details__data">
+        <div className="video-details__data--start">
+          <div className="video-details__creator">
             <p className="video-details__info">By {channel}</p>
           </div>
           <div className="video-details__date">
-            <p className="video-details__info">{timestamp}</p>
+            <p className="video-details__info">{formatDate(timestamp)}</p>
           </div>
         </div>
-        <div className="video-details__metadata--right">
+        <div className="video-details__data--end">
           <div className="video-details__views">
             <img
               className="video-details__icon"
@@ -37,10 +46,9 @@ const VideoDetails =({videoData}) => {
           </div>
         </div>
       </div>
-      <p className="video-details__copy">{description}</p>
+      <p className="video-details__description">{description}</p>
     </div>
   );
 };
 
-
-export default VideoDetails
+export default VideoDetails;
