@@ -4,12 +4,13 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import MainVideo from "./components/MainVideo/MainVideo.jsx";
 import "../src/App.scss";
 import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
+import NextVideo from "./components/NextVideo/NextVideo.jsx";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videoData[0]);
 
   const selectVideo = (videoId) => {
-    console.log('hello', videoId);
+    
     const selectedVideo = videoData.find((video) => video.id === videoId);
     setCurrentVideo(selectedVideo);
   };
@@ -20,6 +21,12 @@ function App() {
       <Navbar />
       <MainVideo videoData={currentVideo} />
       <VideoDetails videoData={currentVideo} />
+      <NextVideo 
+          videoData={videoData}
+          onSelectVideo={selectVideo}
+          selectedVideoId={currentVideo.id}
+        />
+
     </div>
     </>
   );
