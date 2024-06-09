@@ -4,7 +4,7 @@ import NextVideoItem from "../NextVideoItem/NextVideoItem";
 
 const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
   return (
-    <ul>
+    <ul className="nextVideo--list">
       {videoData.map((video) => {
         return (
           <NextVideoItem 

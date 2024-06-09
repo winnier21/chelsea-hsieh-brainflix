@@ -28,6 +28,9 @@ function App() {
       <VideoDetails videoData={currentVideo} />
       <CommentForm />
       <Comment comments={currentVideo.comments}/>
+
+      <h2 className="video-nav-item__header">NEXT VIDEO</h2>
+          
       <NextVideo 
           currentVideoId={currentVideo.id}
           videoData={videoData}

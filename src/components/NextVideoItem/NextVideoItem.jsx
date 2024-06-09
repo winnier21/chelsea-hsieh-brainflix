@@ -1,24 +1,41 @@
-import React from 'react';
-import './NextVideoItem.scss';
+import React from "react";
+import "./NextVideoItem.scss";
 
-const NextVideoItem = ({ id, title, image, channel, onSelectVideo, currentVideoId }) => {
-    const handleClick = () => {
-      onSelectVideo(id);
-    }
-  
-    let videoNavCssClass = "video-nav-item";
-  
-    if (id === currentVideoId) {
-      videoNavCssClass += " video-nav-item--selected";
-    }
-  
-    return (
-      <li className={videoNavCssClass} onClick={handleClick}>
-        <img className="videoNavCssClass__thumbnail"src={image} alt="next video image"/>
-        <h2>{title}</h2>
-        <h3>{channel}</h3>
-      </li>
-    );
+const NextVideoItem = ({
+  id,
+  title,
+  image,
+  channel,
+  onSelectVideo,
+  currentVideoId,
+}) => {
+  const handleClick = () => {
+    onSelectVideo(id);
   };
-  
-  export default NextVideoItem;
+
+  let videoNavCssClass = "video-nav-item";
+
+  if (id === currentVideoId) {
+    videoNavCssClass += " video-nav-item--selected";
+  }
+
+  return (
+    
+     
+      <li className={videoNavCssClass} onClick={handleClick}>
+        <img
+          className="videoNavCssClass__thumbnail"
+          src={image}
+          alt="next video image"
+        />
+        <div className="video-nav-item__container">
+        <h2 className="video-nav-item__title">{title}</h2>
+        <h3 className="video-nav-item__channel">{channel}</h3>
+        </div>
+     
+      </li>
+    
+  );
+};
+
+export default NextVideoItem;

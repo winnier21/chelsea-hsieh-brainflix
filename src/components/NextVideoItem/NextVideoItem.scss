@@ -3,18 +3,49 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.video-nav-item{
+.video-nav-item {
+  padding: $padding-small $padding-small 0 $padding-small;
+  display: flex;
+  &__header {
+    padding: 0 $padding-small;
+    color: $primary-grey;
+    font-weight: 600;
+  }
+  &--selected {
+    display: none;
+  }
 
-
-    &--selected{
-display: none;
-
-    }
+  &__title{
+    color: $primary-black;
+    font-weight: 600;
+    flex-grow: 1;
+    
+   
+  }
+  &__channel{
+    color: $primary-black;
+    font-weight: 400;
+    
+    
+    
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    padding-left:$padding-small;
+  }
 }
 
-.videoNavCssClass{
 
-    &__thumbnail{
-        width: 30vw;
-    }
+.videoNavCssClass {
+  
+
+  &__thumbnail {
+    width: 30vw;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+
+
 }
+
