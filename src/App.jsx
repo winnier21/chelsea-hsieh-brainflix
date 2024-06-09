@@ -3,6 +3,7 @@ import videoData from "./data/video-details.json";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import MainVideo from "./components/MainVideo/MainVideo.jsx";
 import "../src/App.scss";
+import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videoData[0]);
@@ -18,6 +19,7 @@ function App() {
     <div>
       <Navbar />
       <MainVideo videoData={currentVideo} />
+      <VideoDetails videoData={currentVideo} />
     </div>
     </>
   );
