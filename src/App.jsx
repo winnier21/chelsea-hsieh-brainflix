@@ -5,7 +5,8 @@ import MainVideo from "./components/MainVideo/MainVideo.jsx";
 import "../src/App.scss";
 import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
 import NextVideo from "./components/NextVideo/NextVideo.jsx";
-import NextVideoItem from "./components/NextVideoItem/NextVideoItem.jsx";
+
+import CommentForm from './components/CommentForm/CommentForm.jsx';
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videoData[0]);
@@ -25,6 +26,7 @@ function App() {
       <Navbar />
       <MainVideo videoData={currentVideo} />
       <VideoDetails videoData={currentVideo} />
+      <CommentForm />
       <NextVideo 
           currentVideoId={currentVideo.id}
           videoData={videoData}

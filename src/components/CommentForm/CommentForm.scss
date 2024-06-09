@@ -1,0 +1,41 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment-form {
+  &__avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 25% 25%;
+    margin-left: 1rem;
+  }
+  &__button {
+    display: flex;
+    padding: 0.7rem 0 0.7rem 0.5rem;
+    margin: 1rem 0;
+    background-color: $primary-blue;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-darkblue;
+    }
+    
+    &--trigger {
+        font-size: 0.8rem;
+        background-color: transparent;
+        color: $primary-white;
+        border: 0;
+        flex-grow: 1;
+      }
+    &--icon {
+      max-width: 1.2rem;
+
+    }
+    
+  }
+}
