@@ -1,0 +1,15 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.comments-avatar{
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 25% 25%;
+    margin-left: 1rem;
+    background-color: $secondary-lightgrey;
+}

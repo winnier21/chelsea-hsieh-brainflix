@@ -5,7 +5,7 @@ import MainVideo from "./components/MainVideo/MainVideo.jsx";
 import "../src/App.scss";
 import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
 import NextVideo from "./components/NextVideo/NextVideo.jsx";
-
+import Comment from './components/Comment/Comment.jsx';
 import CommentForm from './components/CommentForm/CommentForm.jsx';
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
       <MainVideo videoData={currentVideo} />
       <VideoDetails videoData={currentVideo} />
       <CommentForm />
+      <Comment comments={currentVideo.comments}/>
       <NextVideo 
           currentVideoId={currentVideo.id}
           videoData={videoData}
