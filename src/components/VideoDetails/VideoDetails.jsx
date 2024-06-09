@@ -19,7 +19,7 @@ const VideoDetails = ({ videoData }) => {
     <div className="video-details">
       <h1 className="video-details__title">{title}</h1>
       <div className="video-details__data">
-        <div className="video-details__data--start">
+        <div className="video-details__data--left">
           <div className="video-details__creator">
             <p className="video-details__info">By {channel}</p>
           </div>
@@ -27,7 +27,7 @@ const VideoDetails = ({ videoData }) => {
             <p className="video-details__info">{formatDate(timestamp)}</p>
           </div>
         </div>
-        <div className="video-details__data--end">
+        <div className="video-details__data--right">
           <div className="video-details__views">
             <img
               className="video-details__icon"
