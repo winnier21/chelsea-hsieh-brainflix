@@ -5,13 +5,17 @@ import MainVideo from "./components/MainVideo/MainVideo.jsx";
 import "../src/App.scss";
 import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
 import NextVideo from "./components/NextVideo/NextVideo.jsx";
+import NextVideoItem from "./components/NextVideoItem/NextVideoItem.jsx";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videoData[0]);
 
   const selectVideo = (videoId) => {
-    
-    const selectedVideo = videoData.find((video) => video.id === videoId);
+    console.log ('current', currentVideo.id);
+    const selectedVideo = videoData.find((video) => {
+      return video.id === videoId
+    });
+    console.log('select', selectedVideo);
     setCurrentVideo(selectedVideo);
   };
 
@@ -22,9 +26,10 @@ function App() {
       <MainVideo videoData={currentVideo} />
       <VideoDetails videoData={currentVideo} />
       <NextVideo 
+          currentVideoId={currentVideo.id}
           videoData={videoData}
           onSelectVideo={selectVideo}
-          selectedVideoId={currentVideo.id}
+          
         />
 
     </div>
