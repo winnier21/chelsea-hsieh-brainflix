@@ -10,6 +10,9 @@
   @include tablet{
     padding:1rem 2rem ;
   }
+  @include desktop{
+    padding:0.8rem 1.5rem ;
+  }
   &__header {
     padding: 0 $padding-small;
     color: $primary-grey;
@@ -17,6 +20,9 @@
 
     @include tablet{
       padding: 0.5rem 2rem;
+    }
+    @include desktop{
+      padding: 0.5rem 1.5rem;
     }
   }
   &--selected {
@@ -29,6 +35,10 @@
     flex-grow: 1;
     @include tablet{
       max-width:12rem;
+      font-size: 0.9rem;
+    }
+    @include desktop{
+      min-width:9.5rem;
       font-size: 0.9rem;
     }
     
@@ -60,6 +70,9 @@
     @include tablet{
       width: 7rem;
   }
+  @include desktop{
+    width: 7rem;
+}
   }
 
 

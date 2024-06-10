@@ -8,9 +8,10 @@
   @include tablet {
     padding: $padding-large $padding-large 0 $padding-large;
   }
-  @include desktop {
-    padding: $padding-medium 4rem;
+  @include desktop{
+    padding:0;
   }
+  
 
   &__title {
     margin-bottom: $padding-small;
@@ -24,6 +25,11 @@
     border-bottom: 1px solid $secondary-lightgrey;
     @include tablet {
       border-top: none;
+      
+    }
+    @include desktop {
+      border-top: none;
+      
     }
 
     &--left {
@@ -32,6 +38,10 @@
       flex-direction: column;
       gap: 1rem;
       @include tablet {
+        flex-direction: row;
+        gap: 1.2rem;
+      }
+      @include desktop {
         flex-direction: row;
         gap: 1.2rem;
       }
@@ -44,7 +54,11 @@
 
       @include tablet {
         flex-direction: row;
-        width: 24%;
+        width: 25%;
+      }
+      @include desktop {
+        flex-direction: row;
+        width: 28%;
       }
     }
   }
@@ -72,6 +86,10 @@
   &__description {
     margin: 1rem 0;
     color: $primary-black;
+    @include desktop{
+      font-size: 0.8rem;
+      padding-right:2rem;
+    }
   }
   .comment-title {
     font-weight: 600;

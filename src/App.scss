@@ -119,3 +119,22 @@ body {
     font-family: 700;
   }
 }
+
+.outer-container{
+  @include desktop{
+    display:flex;
+    margin:0 7.5rem;
+  }
+}
+
+.container-left{
+  @include desktop{
+    padding-top:2rem;
+  }
+}
+.container-right{
+  @include desktop{
+  border-left: 1px solid $secondary-lightgrey;
+  padding-top:2rem;
+  }
+}

@@ -12,6 +12,10 @@
     padding: 1rem 0;
     margin: 0 2rem;
   }
+  @include desktop {
+    padding: 1rem 0;
+    margin: 0;
+  }
 
   &__avatar {
     height: 2.5rem;
@@ -22,10 +26,19 @@
   }
   &__left {
     padding-top: 1.5rem;
+    @include desktop{
+      padding-left:1.5rem;
+    }
+    
   }
   &__right {
     padding-left: 1rem;
     width: 100%;
+    @include desktop{
+      margin:0 1.5rem;
+      padding-left:0;
+    }
+    
   }
   &__button {
     display: flex;
@@ -37,6 +50,10 @@
     cursor: pointer;
 
     @include tablet {
+      width: 35%;
+      margin: 0 0 0 1.5rem;
+    }
+    @include desktop {
       width: 35%;
       margin: 0 0 0 1.5rem;
     }
@@ -55,6 +72,11 @@
       width: 100%;
       align-items: center;
     }
+    @include desktop{
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
   }
   &__textarea {
     margin-top: 0.4rem;
@@ -67,6 +89,10 @@
     border: 1px solid $secondary-lightgrey;
 
     @include tablet {
+      height: 2.5rem;
+      margin: 0;
+    }
+    @include desktop {
       height: 2.5rem;
       margin: 0;
     }

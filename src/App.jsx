@@ -25,19 +25,29 @@ function App() {
     <div>
       <Navbar />
       <MainVideo videoData={currentVideo} />
+      <div className="outer-container">
+    
+      <div className="container-left">
       <VideoDetails videoData={currentVideo} />
       <CommentForm />
       <Comment comments={currentVideo.comments}/>
-
-      <h2 className="video-nav-item__header">NEXT VIDEO</h2>
+      </div>
+      
+      
+    <div className="container-right">
+    <h2 className="video-nav-item__header">NEXT VIDEO</h2>
           
-      <NextVideo 
-          currentVideoId={currentVideo.id}
-          videoData={videoData}
-          onSelectVideo={selectVideo}
-          
-        />
-
+          <NextVideo 
+              currentVideoId={currentVideo.id}
+              videoData={videoData}
+              onSelectVideo={selectVideo}
+              
+            />
+    
+    </div>
+      </div>
+      
+     
     </div>
     </>
   );

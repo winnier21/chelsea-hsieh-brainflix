@@ -12,6 +12,13 @@
         margin-left:2rem;
         margin-right:2rem;
     }
+    @include desktop{
+        margin-left:0rem;
+        margin-right:0rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+    
     &__avatar{
         height: 2.5rem;
         width: 2.5rem;
@@ -31,6 +38,10 @@
     padding-bottom: $padding-small;
     @include tablet{
         width:100%;
+    }
+    @include desktop{
+        width:100%;
+        padding-left:2rem;
     }
 }
 &__name{
