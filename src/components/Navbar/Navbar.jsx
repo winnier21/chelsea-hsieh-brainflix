@@ -9,6 +9,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <img src={logo} alt="BrainFlix Logo" className="navbar__logo" />
+   
       <div className="navbar__container">
         <div className="navbar__search--container">
           <img
@@ -28,6 +29,7 @@ const Navbar = () => {
         />
         <button className="navbar__upload">UPLOAD</button>
       </div>
+      
     </nav>
   );
 };
