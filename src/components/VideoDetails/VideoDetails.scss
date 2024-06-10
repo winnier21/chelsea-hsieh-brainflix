@@ -1,0 +1,99 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-details {
+  padding: $padding-small;
+  @include tablet {
+    padding: $padding-large $padding-large 0 $padding-large;
+  }
+  @include desktop{
+    padding:0;
+  }
+  
+
+  &__title {
+    margin-bottom: $padding-small;
+    color: $primary-black;
+  }
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid $secondary-lightgrey;
+    border-bottom: 1px solid $secondary-lightgrey;
+    @include tablet {
+      border-top: none;
+      
+    }
+    @include desktop {
+      border-top: none;
+      
+    }
+
+    &--left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      @include tablet {
+        flex-direction: row;
+        gap: 1.2rem;
+      }
+      @include desktop {
+        flex-direction: row;
+        gap: 1.2rem;
+      }
+    }
+    &--right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include tablet {
+        flex-direction: row;
+        width: 25%;
+      }
+      @include desktop {
+        flex-direction: row;
+        width: 28%;
+      }
+    }
+  }
+
+  &__creator &__info {
+    color: $primary-black;
+    font-weight: 600;
+  }
+
+  &__info {
+    color: $primary-grey;
+  }
+
+  &__views {
+    color: $primary-grey;
+    display: flex;
+    gap: 0.5rem;
+  }
+  &__likes {
+    color: $primary-grey;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__description {
+    margin: 1rem 0;
+    color: $primary-black;
+    @include desktop{
+      font-size: 0.8rem;
+      padding-right:2rem;
+    }
+  }
+  .comment-title {
+    font-weight: 600;
+    color: $primary-black;
+    font-size: 0.85rem;
+  }
+}

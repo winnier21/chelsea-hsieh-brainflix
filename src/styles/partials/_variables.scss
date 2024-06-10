@@ -1,0 +1,20 @@
+@use "./typography" as *;
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+$primary-black: #323232;
+$primary-blue:#0095FF;
+$primary-grey:#AFAFAF;
+$primary-white: #FFFFFF;
+$secondary-darkblack:#000000;
+$secondary-darkblue:#0065AD;
+$secondary-lightgrey:#E1E1E1;
+$secondary-whitegrey: #FAFAFA;
+
+$border-radius: 4px;
+
+$padding-xsmall: .75rem;
+$padding-small: 1rem;
+$padding-medium:1.5rem;
+$padding-large: 2.25rem;

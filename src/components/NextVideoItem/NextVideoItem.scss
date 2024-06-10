@@ -1,0 +1,80 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-nav-item {
+  padding: $padding-small $padding-small 0 $padding-small;
+  display: flex;
+
+  @include tablet{
+    padding:1rem 2rem ;
+  }
+  @include desktop{
+    padding:0.8rem 1.5rem ;
+  }
+  &__header {
+    padding: 0 $padding-small;
+    color: $primary-grey;
+    font-weight: 600;
+
+    @include tablet{
+      padding: 0.5rem 2rem;
+    }
+    @include desktop{
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  &--selected {
+    display: none;
+  }
+
+  &__title{
+    color: $primary-black;
+    font-weight: 600;
+    flex-grow: 1;
+    @include tablet{
+      max-width:12rem;
+      font-size: 0.9rem;
+    }
+    @include desktop{
+      min-width:9.5rem;
+      font-size: 0.9rem;
+    }
+    
+   
+  }
+  &__channel{
+    color: $primary-black;
+    font-weight: 400;
+    
+    
+    
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    padding-left:$padding-small;
+  }
+}
+
+
+.videoNavCssClass {
+  
+
+  &__thumbnail {
+    width: 30vw;
+    object-fit: cover;
+    border-radius: $border-radius;
+
+    @include tablet{
+      width: 7rem;
+  }
+  @include desktop{
+    width: 7rem;
+}
+  }
+
+
+}
+

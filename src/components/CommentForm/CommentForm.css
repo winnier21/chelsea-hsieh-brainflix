@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/src/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("/src/assets/Font/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/src/assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("/src/assets/Font/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/src/assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("/src/assets/Font/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+* {
+  box-sizing: border-box;
+  font-family: "AvenirNext LT Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+
+body {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+.label-text {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+@media (min-width: 48remx) {
+  h1 {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+  }
+  body {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  body .label-text {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: 700;
+  }
+}
+@media (min-width: 80rem) {
+  h1 {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+  }
+  body {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  body .label-text {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: 700;
+  }
+}
+.comment-form {
+  display: flex;
+  border-bottom: 1px solid #E1E1E1;
+  margin: 0 1rem;
+}
+.comment-form__avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -o-object-position: 25% 25%;
+     object-position: 25% 25%;
+}
+.comment-form__left {
+  padding-top: 1.5rem;
+}
+.comment-form__right {
+  padding-left: 1rem;
+}
+.comment-form__button {
+  display: flex;
+  padding: 0.7rem 0 0.7rem 0.5rem;
+  margin: 1rem 0;
+  background-color: #0095FF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.comment-form__button:hover {
+  background-color: #0065AD;
+}
+.comment-form__label {
+  color: #AFAFAF;
+  font-weight: 600;
+}
+.comment-form__textarea {
+  margin-top: 0.4rem;
+  position: relative;
+  height: 6rem;
+  width: 100%;
+  font-size: 0.8rem;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  border: 1px solid #E1E1E1;
+}
+.comment-form__textarea::-moz-placeholder {
+  color: #323232;
+  padding: 0.8rem;
+}
+.comment-form__textarea::placeholder {
+  color: #323232;
+  padding: 0.8rem;
+}
+.comment-form__trigger {
+  font-size: 0.8rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 0;
+  flex-grow: 1;
+}
+.comment-form__icon {
+  max-width: 1.2rem;
+}/*# sourceMappingURL=CommentForm.css.map */

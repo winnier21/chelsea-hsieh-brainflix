@@ -1,0 +1,19 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.main__video {
+  background-color: black;
+
+  &--player {
+    width: 100%;
+    @include tablet {
+      max-height: 45vh;
+    }
+    @include desktop{
+      max-height: 43vh;
+    }
+
+  }
+}
