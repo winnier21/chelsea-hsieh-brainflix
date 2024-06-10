@@ -11,9 +11,8 @@
     @include tablet {
       max-height: 45vh;
     }
-    @include desktop{
+    @include desktop {
       max-height: 43vh;
     }
-
   }
 }

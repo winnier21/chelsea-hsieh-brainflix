@@ -7,15 +7,15 @@ const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
     <ul className="nextVideo--list">
       {videoData.map((video) => {
         return (
-          <NextVideoItem 
-          key={video.id}
-          id={video.id}
-          image={video.image}
-          title={video.title}
-          channel={video.channel}
-          onSelectVideo={onSelectVideo}
-          currentVideoId={currentVideoId}
-           />
+          <NextVideoItem
+            key={video.id}
+            id={video.id}
+            image={video.image}
+            title={video.title}
+            channel={video.channel}
+            onSelectVideo={onSelectVideo}
+            currentVideoId={currentVideoId}
+          />
         );
       })}
     </ul>

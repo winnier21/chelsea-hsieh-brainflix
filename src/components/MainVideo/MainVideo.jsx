@@ -1,21 +1,16 @@
-import React from 'react';
-import './MainVideo.scss';
+import React from "react";
+import "./MainVideo.scss";
 
+const MainVideo = ({ videoData }) => {
+  const { id, image, video: videoSrc } = videoData;
 
-const MainVideo =({videoData}) => {
-  const {id, image, video:videoSrc} = videoData;
-   
   return (
-   
-      <div className="main__video">
-        <video className='main__video--player'controls poster={image}>
+    <div className="main__video">
+      <video className="main__video--player" controls poster={image}>
         <source src={videoSrc} type="video/mp4" />
       </video>
-  
-      </div>
-    );
-  }
-  
-  export default MainVideo;
+    </div>
+  );
+};
 
-  
+export default MainVideo;

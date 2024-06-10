@@ -1,12 +1,12 @@
-import React from 'react';
-import './VideoDetails.scss';
-import likesIcon from '../../assets/Icons/likes.svg';
-import viewsIcon from '../../assets/Icons/views.svg';
-
+import React from "react";
+import "./VideoDetails.scss";
+import likesIcon from "../../assets/Icons/likes.svg";
+import viewsIcon from "../../assets/Icons/views.svg";
 
 const VideoDetails = ({ videoData }) => {
-  const { title, channel, timestamp, views, likes, description, comments } = videoData;
-  
+  const { title, channel, timestamp, views, likes, description, comments } =
+    videoData;
+
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
     const day = date.getDate();

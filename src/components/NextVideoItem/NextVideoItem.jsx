@@ -20,21 +20,17 @@ const NextVideoItem = ({
   }
 
   return (
-    
-     
-      <li className={videoNavCssClass} onClick={handleClick}>
-        <img
-          className="videoNavCssClass__thumbnail"
-          src={image}
-          alt="next video image"
-        />
-        <div className="video-nav-item__container">
+    <li className={videoNavCssClass} onClick={handleClick}>
+      <img
+        className="videoNavCssClass__thumbnail"
+        src={image}
+        alt="next video image"
+      />
+      <div className="video-nav-item__container">
         <h2 className="video-nav-item__title">{title}</h2>
         <h3 className="video-nav-item__channel">{channel}</h3>
-        </div>
-     
-      </li>
-    
+      </div>
+    </li>
   );
 };
 
