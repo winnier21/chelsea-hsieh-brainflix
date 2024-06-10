@@ -14,21 +14,20 @@ const CommentForm = () => {
           JOIN THE CONVERSATION
         </label>
         <div className="comment-form__container">
-        <textarea
-          className="comment-form__textarea"
-          placeholder="Add a new comment"
-        ></textarea>
+          <textarea
+            className="comment-form__textarea"
+            placeholder="Add a new comment"
+          ></textarea>
 
-        <div class="comment-form__button">
-          <img
-            className="comment-form__icon"
-            src={commentIcon}
-            alt="comment button"
-          />
-          <button className="comment-form__trigger">COMMENT</button>
+          <div class="comment-form__button">
+            <img
+              className="comment-form__icon"
+              src={commentIcon}
+              alt="comment button"
+            />
+            <button className="comment-form__trigger">COMMENT</button>
+          </div>
         </div>
-        </div>
-        
       </div>
     </form>
   );

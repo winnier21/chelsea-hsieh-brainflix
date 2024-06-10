@@ -8,10 +8,9 @@
   @include tablet {
     padding: $padding-large $padding-large 0 $padding-large;
   }
-  @include desktop{
-    padding:0;
+  @include desktop {
+    padding: 0;
   }
-  
 
   &__title {
     margin-bottom: $padding-small;
@@ -25,11 +24,9 @@
     border-bottom: 1px solid $secondary-lightgrey;
     @include tablet {
       border-top: none;
-      
     }
     @include desktop {
       border-top: none;
-      
     }
 
     &--left {
@@ -86,9 +83,9 @@
   &__description {
     margin: 1rem 0;
     color: $primary-black;
-    @include desktop{
+    @include desktop {
       font-size: 0.8rem;
-      padding-right:2rem;
+      padding-right: 2rem;
     }
   }
   .comment-title {

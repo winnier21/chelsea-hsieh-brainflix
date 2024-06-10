@@ -16,11 +16,13 @@ const Comment = ({ comments }) => {
         <div key={comment.id} className="comment">
           <div className="comment__avatar"></div>
           <div className="comment__outer">
-          <div className="comment__container">
-          <p className="comment__name">{comment.name}</p>
-          <span className="comment__date">{formatDate(comment.timestamp)}</span>
-          </div>
-          <p className="comment__text">{comment.comment}</p>
+            <div className="comment__container">
+              <p className="comment__name">{comment.name}</p>
+              <span className="comment__date">
+                {formatDate(comment.timestamp)}
+              </span>
+            </div>
+            <p className="comment__text">{comment.comment}</p>
           </div>
         </div>
       ))}

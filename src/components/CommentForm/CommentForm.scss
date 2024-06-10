@@ -26,19 +26,17 @@
   }
   &__left {
     padding-top: 1.5rem;
-    @include desktop{
-      padding-left:1.5rem;
+    @include desktop {
+      padding-left: 1.5rem;
     }
-    
   }
   &__right {
     padding-left: 1rem;
     width: 100%;
-    @include desktop{
-      margin:0 1.5rem;
-      padding-left:0;
+    @include desktop {
+      margin: 0 1.5rem;
+      padding-left: 0;
     }
-    
   }
   &__button {
     display: flex;
@@ -72,7 +70,7 @@
       width: 100%;
       align-items: center;
     }
-    @include desktop{
+    @include desktop {
       display: flex;
       width: 100%;
       align-items: center;
