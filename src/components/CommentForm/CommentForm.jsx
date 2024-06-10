@@ -13,6 +13,7 @@ const CommentForm = () => {
         <label htmlFor="comment" className="comment-form__label">
           JOIN THE CONVERSATION
         </label>
+        <div className="comment-form__container">
         <textarea
           className="comment-form__textarea"
           placeholder="Add a new comment"
@@ -26,6 +27,8 @@ const CommentForm = () => {
           />
           <button className="comment-form__trigger">COMMENT</button>
         </div>
+        </div>
+        
       </div>
     </form>
   );

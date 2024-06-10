@@ -9,7 +9,7 @@
   &--player {
     width: 100%;
     @include tablet {
-      max-height: 59vh;
+      max-height: 45vh;
     }
     @include desktop{
       max-height: 47vh;
