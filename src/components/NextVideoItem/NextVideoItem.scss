@@ -6,10 +6,18 @@
 .video-nav-item {
   padding: $padding-small $padding-small 0 $padding-small;
   display: flex;
+
+  @include tablet{
+    padding:1rem 2rem ;
+  }
   &__header {
     padding: 0 $padding-small;
     color: $primary-grey;
     font-weight: 600;
+
+    @include tablet{
+      padding: 0.5rem 2rem;
+    }
   }
   &--selected {
     display: none;
@@ -19,6 +27,10 @@
     color: $primary-black;
     font-weight: 600;
     flex-grow: 1;
+    @include tablet{
+      max-width:12rem;
+      font-size: 0.9rem;
+    }
     
    
   }
@@ -44,6 +56,10 @@
     width: 30vw;
     object-fit: cover;
     border-radius: $border-radius;
+
+    @include tablet{
+      width: 7rem;
+  }
   }
 
 
