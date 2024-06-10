@@ -8,6 +8,9 @@
   @include tablet {
     padding: $padding-large $padding-large 0 $padding-large;
   }
+  @include desktop {
+    padding: $padding-medium 4rem;
+  }
 
   &__title {
     margin-bottom: $padding-small;

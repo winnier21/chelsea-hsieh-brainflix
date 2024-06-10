@@ -7,6 +7,11 @@
     margin:$padding-small;
     display: flex;
     border-bottom: 1px solid $secondary-lightgrey;
+
+    @include tablet{
+        margin-left:2rem;
+        margin-right:2rem;
+    }
     &__avatar{
         height: 2.5rem;
         width: 2.5rem;
@@ -24,6 +29,9 @@
     width: 85%;
     padding-left:$padding-small;
     padding-bottom: $padding-small;
+    @include tablet{
+        width:100%;
+    }
 }
 &__name{
 color: $primary-black;
