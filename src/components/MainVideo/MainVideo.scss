@@ -4,11 +4,12 @@
 @use "../../styles/partials/variables" as *;
 
 .main__video {
+  background-color: black;
 
-
-    &--player{
-      width:100%;
+  &--player {
+    width: 100%;
+    @include tablet {
+      max-height: 59vh;
     }
   }
-  
-  
+}
