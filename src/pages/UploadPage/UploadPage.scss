@@ -5,7 +5,7 @@
 
 .upload {
   border-top: 1px solid $secondary-lightgrey;
-  padding: $padding-medium $padding-small;
+  padding: $padding-medium $padding-small 0 $padding-small;
 
   h1 {
     padding-bottom: $padding-medium;
@@ -18,46 +18,56 @@
   &__thumbnail {
     max-width: 100%;
     padding: .3rem 0 .5rem 0;
+
+  
   }
   &__title {
     input {
       background-color: $secondary-whitegrey;
       padding: 0.625rem 1.875rem 0.625rem 0.5rem;
       border: 1px solid $secondary-lightgrey;
-      border-radius: 0.3125rem;
+      border-radius: $border-radius;
       font-size: 0.8125rem;
       width: 100%;
       color: $primary-black;
+      margin-bottom:1rem;
     }
   }
   &__description {
-    input {
+    textarea {
       background-color: $secondary-whitegrey;
-      padding: 0rem 1.875rem 0.625rem 0.5rem;
+      padding: 0.5rem 0.5rem 0.625rem 0.5rem;
       border: 1px solid $secondary-lightgrey;
-      border-radius: 0.3125rem;
+      border-radius: $border-radius;
       font-size: 0.8125rem;
-      line-height: 8rem;
+      line-height: 1rem;
+      height: 5rem;
       width: 100%;
     }
   }
 
   .publish {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0 2rem 0;
     
 
     &__button{
       width:100%;
-      display:flex;
       padding:$padding-xsmall;
-      
-      text-align: center;
       border:none;
-      border-radius: 4px;
+      border-radius: $border-radius;
       background-color: $primary-blue;
-      color: $primary-white;
-      font-size: 0.875rem;
+      display: flex;
+     
+      h2{
+        text-align: center;
+        font-size: 0.875rem;
+        color: $primary-white;
+        display:flex;
+        flex-grow: 1;
+        font-weight: 400;
+        justify-content: center;
+       }
     }
    &__icon{
     max-width: 1.2rem;
@@ -69,12 +79,20 @@
   .cancel__button {
     width: 100%;
     background-color: $primary-white;
-    color: $primary-blue;
-    font-weight: 600;
     border: none;
-    border-radius: 0.3125rem;
-    font-size: 0.875rem;
-    position: relative;
     height: 3rem;
+    margin-top:1rem;
+
+
+    h2{
+      text-align: center;
+      font-size: 0.875rem;
+      color: $primary-blue;
+      display:flex;
+      flex-grow: 1;
+      font-weight: 600;
+      justify-content: center;
+      padding-left:1rem;
+     }
   }
 }
