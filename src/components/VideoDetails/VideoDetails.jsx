@@ -1,11 +1,36 @@
-import React from "react";
 import "./VideoDetails.scss";
 import likesIcon from "../../assets/Icons/likes.svg";
 import viewsIcon from "../../assets/Icons/views.svg";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { API_URL, API_KEY } from "../../utils/api.jsx";
 
-const VideoDetails = ({ videoData }) => {
+const VideoDetails = (testId) => {
+  const videoId = testId.videoData;
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  useEffect(() => {
+    const getSelectedVideo = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`);
+        const selectedVideo = res.data;
+        setSelectedVideo(selectedVideo);
+      } catch (error) {
+        console.log("Error fetching selected video:", error);
+      }
+    };
+
+    if (videoId) {
+      getSelectedVideo();
+    }
+  }, [videoId]);
+
+  if (!selectedVideo) {
+    return <p>Loading...</p>;
+  }
+
   const { title, channel, timestamp, views, likes, description, comments } =
-    videoData;
+    selectedVideo;
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);

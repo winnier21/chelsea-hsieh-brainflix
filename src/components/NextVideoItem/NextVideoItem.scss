@@ -33,6 +33,7 @@
     color: $primary-black;
     font-weight: 600;
     flex-grow: 1;
+
     @include tablet {
       max-width: 12rem;
       font-size: 0.9rem;
@@ -66,4 +67,7 @@
       width: 7rem;
     }
   }
+}
+a:-webkit-any-link {
+  text-decoration: none;
 }

@@ -1,7 +1,7 @@
-import React from "react";
 import "./CommentForm.scss";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
+import React from "react";
 
 const CommentForm = () => {
   return (

@@ -1,0 +1,166 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload {
+  border-top: 1px solid $secondary-lightgrey;
+  padding: $padding-medium $padding-small 0 $padding-small;
+
+  @include tablet {
+    padding-left: $padding-large;
+    padding-right: $padding-large;
+  }
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  h1 {
+    padding-bottom: $padding-medium;
+
+    @include tablet {
+      border-bottom: 1px solid $secondary-lightgrey;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__wrapper {
+    @include desktop {
+      border-top: 1px solid $secondary-lightgrey;
+      display: flex;
+    }
+
+    &--left {
+      @include desktop {
+        width: 45%;
+        margin-right: 1.5rem;
+        padding-top: $padding-medium;
+      }
+    }
+    &--right {
+      @include desktop {
+        width: 100%;
+        padding-top: $padding-medium;
+      }
+    }
+  }
+  h2 {
+    color: $primary-grey;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__thumbnail {
+    max-width: 100%;
+    padding: 0.3rem 0 0.5rem 0;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  &__title {
+    input {
+      background-color: $secondary-whitegrey;
+      padding: 0.625rem 1.875rem 0.625rem 0.5rem;
+      border: 1px solid $secondary-lightgrey;
+      border-radius: $border-radius;
+      font-size: 0.8125rem;
+      width: 100%;
+      color: $primary-black;
+      margin-bottom: 1rem;
+    }
+  }
+  &__description {
+    textarea {
+      background-color: $secondary-whitegrey;
+      padding: 0.5rem 0.5rem 0.625rem 0.5rem;
+      border: 1px solid $secondary-lightgrey;
+      border-radius: $border-radius;
+      font-size: 0.8125rem;
+      line-height: 1rem;
+      height: 5rem;
+      width: 100%;
+
+      @include desktop {
+        height: 5.6rem;
+      }
+    }
+  }
+
+  .publish {
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+    @include tablet {
+      display: flex;
+      align-items: end;
+      justify-content: right;
+    }
+    @include desktop {
+      display: flex;
+      align-items: end;
+      justify-content: right;
+      border-top: 1px solid $secondary-lightgrey;
+    }
+
+    &__button {
+      width: 100%;
+      padding: $padding-xsmall;
+      border: none;
+      border-radius: $border-radius;
+      background-color: $primary-blue;
+      display: flex;
+
+      @include tablet {
+        order: 2;
+        width: 23%;
+      }
+      @include desktop {
+        order: 2;
+        width: 15%;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 0.875rem;
+        color: $primary-white;
+        display: flex;
+        flex-grow: 1;
+        font-weight: 400;
+        justify-content: center;
+      }
+    }
+    &__icon {
+      max-width: 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .cancel__button {
+    width: 100%;
+    background-color: $primary-white;
+    border: none;
+    height: 3rem;
+    margin-top: 1rem;
+    @include tablet {
+      width: 28%;
+    }
+    @include desktop {
+      width: 20%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 0.875rem;
+      color: $primary-blue;
+      display: flex;
+      flex-grow: 1;
+      font-weight: 600;
+      justify-content: center;
+      padding-left: 1rem;
+    }
+  }
+}

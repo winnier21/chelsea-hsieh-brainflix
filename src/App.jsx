@@ -1,49 +1,22 @@
-import React, { useState } from "react";
-import videoData from "./data/video-details.json";
+import React from "react";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import MainVideo from "./components/MainVideo/MainVideo.jsx";
 import "../src/App.scss";
-import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
-import NextVideo from "./components/NextVideo/NextVideo.jsx";
-import Comment from "./components/Comment/Comment.jsx";
-import CommentForm from "./components/CommentForm/CommentForm.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UploadPage from "./pages/UploadPage/UploadPage.jsx";
 
 function App() {
-  const [currentVideo, setCurrentVideo] = useState(videoData[0]);
-
-  const selectVideo = (videoId) => {
-    console.log("current", currentVideo.id);
-    const selectedVideo = videoData.find((video) => {
-      return video.id === videoId;
-    });
-    console.log("select", selectedVideo);
-    setCurrentVideo(selectedVideo);
-  };
-
   return (
-    <>
-      <div>
+    <div>
+      <BrowserRouter>
         <Navbar />
-        <MainVideo videoData={currentVideo} />
-        <div className="outer-container">
-          <div className="container-left">
-            <VideoDetails videoData={currentVideo} />
-            <CommentForm />
-            <Comment comments={currentVideo.comments} />
-          </div>
-
-          <div className="container-right">
-            <h2 className="video-nav-item__header">NEXT VIDEO</h2>
-
-            <NextVideo
-              currentVideoId={currentVideo.id}
-              videoData={videoData}
-              onSelectVideo={selectVideo}
-            />
-          </div>
-        </div>
-      </div>
-    </>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/videos/:videoId" element={<HomePage />} />
+          <Route path="/upload" element={<UploadPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

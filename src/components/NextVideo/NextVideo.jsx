@@ -1,21 +1,24 @@
 import React from "react";
 import "./NextVideo.scss";
 import NextVideoItem from "../NextVideoItem/NextVideoItem";
+import { Link } from "react-router-dom";
 
 const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
   return (
     <ul className="nextVideo--list">
       {videoData.map((video) => {
         return (
-          <NextVideoItem
-            key={video.id}
-            id={video.id}
-            image={video.image}
-            title={video.title}
-            channel={video.channel}
-            onSelectVideo={onSelectVideo}
-            currentVideoId={currentVideoId}
-          />
+          <Link key={video.id} to={`/videos/${video.id}`}>
+            <NextVideoItem
+              key={video.id}
+              id={video.id}
+              image={video.image}
+              title={video.title}
+              channel={video.channel}
+              onSelectVideo={onSelectVideo}
+              currentVideoId={currentVideoId}
+            />
+          </Link>
         );
       })}
     </ul>
@@ -23,10 +26,3 @@ const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
 };
 
 export default NextVideo;
-/* //  
-          
-          <li className="next-video__item">
-            
-            <h2>{video.title}</h2>
-            <h3>{video.channel}</h3>
-          </li>          //  */

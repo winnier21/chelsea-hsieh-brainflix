@@ -47,7 +47,7 @@
 
   &__search {
     display: flex;
-    width: 8rem;
+    width: 100%;
     padding: 0.3125rem 0.625rem;
     border: none;
     background-color: $secondary-whitegrey;
@@ -89,6 +89,9 @@
   }
 
   &__upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.8rem;
     background-color: transparent;
     color: $primary-white;
@@ -103,12 +106,17 @@
 
     &--container {
       display: flex;
-      padding: 0.7rem 0 0.7rem 0.5rem;
+      padding: 0.7rem 0.5rem 0.7rem 0.5rem;
       margin: 1rem 0 0.2rem 0;
       background-color: $primary-blue;
       border: none;
       border-radius: $border-radius;
+      text-align: center;
       cursor: pointer;
+
+      a {
+        width: 100%;
+      }
 
       @include tablet {
         position: absolute;
@@ -132,6 +140,12 @@
 
     &--icon {
       max-width: 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
+    &--wrapper {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
