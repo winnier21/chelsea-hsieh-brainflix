@@ -1,19 +1,46 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { API_URL, API_KEY } from "../../utils/api.jsx";
 import "./Comment.scss";
 
-const Comment = ({ comments=[] }) => {
-  console.log(comments)
+const Comment = (testId) => {
+  const  videoId  = testId.getComment;
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  //console.log(videoId)
+  
+  useEffect(() => {
+    const getComments = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`);
+        const selectedVideo = res.data;
+        console.log(selectedVideo);
+        setSelectedVideo(selectedVideo);
+      } catch (error) {
+        console.log("Error fetching selected video:", error);
+      }
+    };
+
+    if (videoId) {
+      getComments();
+    }
+  }, [videoId]);
+
+  if (!selectedVideo) {
+    return <p>Loading...</p>;
+  }
+
   const formatDate = (timestamp) => {
+    
     const date = new Date(timestamp);
     const day = date.getDate();
     const month = date.getMonth() + 1; // Months are zero-indexed
     const year = date.getFullYear();
     return `${month}/${day}/${year}`;
   };
-
   return (
+  
     <div>
-      {comments.map((comment) => (
+      {selectedVideo.comments.map((comment) => (
         <div key={comment.id} className="comment">
           <div className="comment__avatar"></div>
           <div className="comment__outer">

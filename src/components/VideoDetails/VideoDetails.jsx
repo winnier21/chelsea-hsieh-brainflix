@@ -6,6 +6,7 @@ import axios from 'axios';
 import React, { useState, useEffect} from "react";
 import { API_URL, API_KEY } from "../../utils/api.jsx";
 
+
 const VideoDetails = (testId) => {
   const  videoId  = testId.videoData;
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -16,7 +17,7 @@ const VideoDetails = (testId) => {
       try {
         const res = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`);
         const selectedVideo = res.data;
-        console.log(selectedVideo);
+        //console.log(selectedVideo);
         setSelectedVideo(selectedVideo);
       } catch (error) {
         console.log("Error fetching selected video:", error);
@@ -76,6 +77,7 @@ const VideoDetails = (testId) => {
       </div>
       <p className="video-details__description">{description}</p>
       <h2 className="comment-title">{comments.length} Comments</h2>
+
     </div>
   );
 };
