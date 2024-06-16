@@ -7,8 +7,19 @@
   border-top: 1px solid $secondary-lightgrey;
   padding: $padding-medium $padding-small 0 $padding-small;
 
+  @include tablet{
+    padding-left: $padding-large;
+    padding-right: $padding-large;
+  }
+
   h1 {
     padding-bottom: $padding-medium;
+
+    @include tablet{
+      border-bottom: 1px solid $secondary-lightgrey;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
   }
   h2 {
     color: $primary-grey;
@@ -18,7 +29,9 @@
   &__thumbnail {
     max-width: 100%;
     padding: .3rem 0 .5rem 0;
-
+  @include tablet{
+    width: 50%;
+  }
   
   }
   &__title {
@@ -49,7 +62,12 @@
   .publish {
     width: 100%;
     margin: 1rem 0 2rem 0;
-    
+    @include tablet{
+      display: flex;
+      align-items: end;
+      justify-content: right;
+      
+    }
 
     &__button{
       width:100%;
@@ -58,6 +76,11 @@
       border-radius: $border-radius;
       background-color: $primary-blue;
       display: flex;
+
+      @include tablet{
+        order: 2;
+        width:23%;
+      }
      
       h2{
         text-align: center;
@@ -82,7 +105,10 @@
     border: none;
     height: 3rem;
     margin-top:1rem;
-
+    @include tablet{
+      width: 28%;
+      
+    }
 
     h2{
       text-align: center;
