@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <div className="navbar__upload--container">
       <Link to="/upload" >
-        <div>
+        <div className="navbar__upload--wrapper">
         <img
           src={navbarUploadIcon}
           alt="Upload Icon"
