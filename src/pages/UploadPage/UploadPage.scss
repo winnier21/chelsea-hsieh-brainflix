@@ -1,57 +1,80 @@
-.upload-video {
-    h1{
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
-    h2{
-      font-size: 1rem;
-      line-height: 1.25rem;
-      color: black;
-    }
-    .thumbnail {
-    
-      max-width: 100%;
-     
-    
-    }
-    .video-title{
-      input{
-        padding: 0.625rem 1.875rem 0.625rem 0.5rem;
-        border: 1px solid black;
-        border-radius: 0.3125rem;
-        font-size: 0.8125rem;
-        width: 100%;
-      }
-    }
-    .video-description{
-      input{
-        padding: 0rem 1.875rem 0.625rem 0.5rem;
-        border: 1px solid black;
-        border-radius: 0.3125rem;
-        font-size: 0.8125rem;
-        line-height: 8rem;
-        width: 100%;
-      }
-    }
-    
-    .publish {
-      width: 100%;
-      margin:2rem 0;
-    
-    }
-    
-    .cancel-button {
-      width: 100%;
-      background-color: white;
-      color: blue;
-      border: none;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload {
+  border-top: 1px solid $secondary-lightgrey;
+  padding: $padding-medium $padding-small;
+
+  h1 {
+    padding-bottom: $padding-medium;
+  }
+  h2 {
+    color: $primary-grey;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__thumbnail {
+    max-width: 100%;
+    padding: .3rem 0 .5rem 0;
+  }
+  &__title {
+    input {
+      background-color: $secondary-whitegrey;
+      padding: 0.625rem 1.875rem 0.625rem 0.5rem;
+      border: 1px solid $secondary-lightgrey;
       border-radius: 0.3125rem;
-      //padding: 0.625rem 2.5rem;
+      font-size: 0.8125rem;
+      width: 100%;
+      color: $primary-black;
+    }
+  }
+  &__description {
+    input {
+      background-color: $secondary-whitegrey;
+      padding: 0rem 1.875rem 0.625rem 0.5rem;
+      border: 1px solid $secondary-lightgrey;
+      border-radius: 0.3125rem;
+      font-size: 0.8125rem;
+      line-height: 8rem;
+      width: 100%;
+    }
+  }
+
+  .publish {
+    width: 100%;
+    margin: 2rem 0;
+    
+
+    &__button{
+      width:100%;
+      display:flex;
+      padding:$padding-xsmall;
+      
+      text-align: center;
+      border:none;
+      border-radius: 4px;
+      background-color: $primary-blue;
+      color: $primary-white;
       font-size: 0.875rem;
-      position: relative;
-      height: 3rem;
     }
-    }
-    
-    
-    
+   &__icon{
+    max-width: 1.2rem;
+    display: flex;
+    justify-content: center;
+   }
+  }
+
+  .cancel__button {
+    width: 100%;
+    background-color: $primary-white;
+    color: $primary-blue;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+    position: relative;
+    height: 3rem;
+  }
+}
