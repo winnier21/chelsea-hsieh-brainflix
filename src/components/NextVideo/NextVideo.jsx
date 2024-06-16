@@ -8,16 +8,16 @@ const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
     <ul className="nextVideo--list">
       {videoData.map((video) => {
         return (
-          <Link key = {video.id} to = {`/videos/${video.id}`} >
-          <NextVideoItem
-            key={video.id}
-            id={video.id}
-            image={video.image}
-            title={video.title}
-            channel={video.channel}
-            onSelectVideo={onSelectVideo}
-            currentVideoId={currentVideoId}
-          />
+          <Link key={video.id} to={`/videos/${video.id}`}>
+            <NextVideoItem
+              key={video.id}
+              id={video.id}
+              image={video.image}
+              title={video.title}
+              channel={video.channel}
+              onSelectVideo={onSelectVideo}
+              currentVideoId={currentVideoId}
+            />
           </Link>
         );
       })}
@@ -26,4 +26,3 @@ const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
 };
 
 export default NextVideo;
-

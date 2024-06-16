@@ -13,7 +13,7 @@ const UploadPage = () => {
       };
 
   return (
-    <div>
+    <div className="upload-page">
       <VideoUpload handleFormSubmit={handleFormSubmit} />
     </div>
   );

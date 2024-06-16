@@ -1,14 +1,10 @@
-
 import "./MainVideo.scss";
-import {API_URL, API_KEY} from "../../utils/api.jsx";
+import { API_URL, API_KEY } from "../../utils/api.jsx";
 import React from "react";
-
 
 const MainVideo = ({ videoData }) => {
   const { id, image, video: videoSrc } = videoData;
-  //console.log (videoData)
-  
-    
+
   return (
     <div className="main__video">
       <video className="main__video--player" controls poster={image}>

@@ -1,18 +1,7 @@
 import React from "react";
 import "./NextVideoItem.scss";
 
-const NextVideoItem = ({
-  id,
-  title,
-  image,
-  channel,
-  onSelectVideo,
-  currentVideoId,
-}) => {
-  // const handleClick = () => {
-  //   onSelectVideo(id);
-  // };
-
+const NextVideoItem = ({ id, title, image, channel, currentVideoId }) => {
   let videoNavCssClass = "video-nav-item";
 
   if (id === currentVideoId) {
@@ -20,7 +9,7 @@ const NextVideoItem = ({
   }
 
   return (
-    <li className={videoNavCssClass} >
+    <li className={videoNavCssClass}>
       <img
         className="videoNavCssClass__thumbnail"
         src={image}
@@ -35,5 +24,3 @@ const NextVideoItem = ({
 };
 
 export default NextVideoItem;
-
-// onClick={handleClick}

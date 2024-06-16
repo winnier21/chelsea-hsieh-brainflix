@@ -4,10 +4,9 @@ import { API_URL, API_KEY } from "../../utils/api.jsx";
 import "./Comment.scss";
 
 const Comment = (testId) => {
-  const  videoId  = testId.getComment;
+  const videoId = testId.getComment;
   const [selectedVideo, setSelectedVideo] = useState(null);
-  //console.log(videoId)
-  
+
   useEffect(() => {
     const getComments = async () => {
       try {
@@ -30,7 +29,6 @@ const Comment = (testId) => {
   }
 
   const formatDate = (timestamp) => {
-    
     const date = new Date(timestamp);
     const day = date.getDate();
     const month = date.getMonth() + 1; // Months are zero-indexed
@@ -38,7 +36,6 @@ const Comment = (testId) => {
     return `${month}/${day}/${year}`;
   };
   return (
-  
     <div>
       {selectedVideo.comments.map((comment) => (
         <div key={comment.id} className="comment">

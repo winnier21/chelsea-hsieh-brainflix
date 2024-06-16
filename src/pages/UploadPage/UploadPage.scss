@@ -7,11 +7,11 @@
   border-top: 1px solid $secondary-lightgrey;
   padding: $padding-medium $padding-small 0 $padding-small;
 
-  @include tablet{
+  @include tablet {
     padding-left: $padding-large;
     padding-right: $padding-large;
   }
-  @include desktop{
+  @include desktop {
     padding-left: 8rem;
     padding-right: 8rem;
   }
@@ -19,29 +19,29 @@
   h1 {
     padding-bottom: $padding-medium;
 
-    @include tablet{
+    @include tablet {
       border-bottom: 1px solid $secondary-lightgrey;
       font-weight: 600;
       margin-bottom: 1.5rem;
     }
   }
-  &__wrapper{
-    @include desktop{
-      border-top:1px solid $secondary-lightgrey;
-      display:flex;
+  &__wrapper {
+    @include desktop {
+      border-top: 1px solid $secondary-lightgrey;
+      display: flex;
     }
-    
-    &--left{
+
+    &--left {
       @include desktop {
-        width:45%;
-        margin-right:1.5rem;
-        padding-top:$padding-medium;
+        width: 45%;
+        margin-right: 1.5rem;
+        padding-top: $padding-medium;
       }
     }
-    &--right{
-      @include desktop{
+    &--right {
+      @include desktop {
         width: 100%;
-        padding-top:$padding-medium;
+        padding-top: $padding-medium;
       }
     }
   }
@@ -52,15 +52,14 @@
   }
   &__thumbnail {
     max-width: 100%;
-    padding: .3rem 0 .5rem 0;
-  @include tablet{
-    width: 50%;
-  }
-  @include desktop{
-    width: 100%;
-    padding:0;
-  }
-  
+    padding: 0.3rem 0 0.5rem 0;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 100%;
+      padding: 0;
+    }
   }
   &__title {
     input {
@@ -71,7 +70,7 @@
       font-size: 0.8125rem;
       width: 100%;
       color: $primary-black;
-      margin-bottom:1rem;
+      margin-bottom: 1rem;
     }
   }
   &__description {
@@ -85,8 +84,8 @@
       height: 5rem;
       width: 100%;
 
-      @include desktop{
-        height:5.6rem;
+      @include desktop {
+        height: 5.6rem;
       }
     }
   }
@@ -94,52 +93,50 @@
   .publish {
     width: 100%;
     margin: 1rem 0 2rem 0;
-    @include tablet{
+    @include tablet {
       display: flex;
       align-items: end;
       justify-content: right;
-      
     }
-    @include desktop{
+    @include desktop {
       display: flex;
       align-items: end;
       justify-content: right;
       border-top: 1px solid $secondary-lightgrey;
-      
     }
 
-    &__button{
-      width:100%;
-      padding:$padding-xsmall;
-      border:none;
+    &__button {
+      width: 100%;
+      padding: $padding-xsmall;
+      border: none;
       border-radius: $border-radius;
       background-color: $primary-blue;
       display: flex;
 
-      @include tablet{
+      @include tablet {
         order: 2;
-        width:23%;
+        width: 23%;
       }
-      @include desktop{
+      @include desktop {
         order: 2;
-        width:15%;
+        width: 15%;
       }
-     
-      h2{
+
+      h2 {
         text-align: center;
         font-size: 0.875rem;
         color: $primary-white;
-        display:flex;
+        display: flex;
         flex-grow: 1;
         font-weight: 400;
         justify-content: center;
-       }
+      }
     }
-   &__icon{
-    max-width: 1.2rem;
-    display: flex;
-    justify-content: center;
-   }
+    &__icon {
+      max-width: 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .cancel__button {
@@ -147,26 +144,23 @@
     background-color: $primary-white;
     border: none;
     height: 3rem;
-    margin-top:1rem;
-    @include tablet{
+    margin-top: 1rem;
+    @include tablet {
       width: 28%;
-      
     }
-    @include desktop{
+    @include desktop {
       width: 20%;
-      
     }
 
-    h2{
+    h2 {
       text-align: center;
       font-size: 0.875rem;
       color: $primary-blue;
-      display:flex;
+      display: flex;
       flex-grow: 1;
       font-weight: 600;
       justify-content: center;
-      padding-left:1rem;
-     }
+      padding-left: 1rem;
+    }
   }
 }
-

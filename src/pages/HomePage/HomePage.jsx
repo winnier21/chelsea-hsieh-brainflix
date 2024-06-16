@@ -10,7 +10,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function HomePage() {
- 
   const [videoData, setVideoData] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const { videoId } = useParams();
@@ -40,9 +39,7 @@ function HomePage() {
       try {
         const res = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`);
         const selectedVideo = res.data;
-        
-        //console.log(res.data)
-       
+
         setSelectedVideo(selectedVideo);
       } catch (error) {
         console.log("Error fetching selected video:", error);
@@ -60,8 +57,9 @@ function HomePage() {
 
   const currentVideo = selectedVideo || videoData[0].id; // Use selectedVideo if available, otherwise default to the first video
 
-
-  const filteredVideoData = videoData.filter((video) => video.id !== currentVideo.id);
+  const filteredVideoData = videoData.filter(
+    (video) => video.id !== currentVideo.id
+  );
   //console.log(selectedVideo.comments)
 
   return (
@@ -72,7 +70,6 @@ function HomePage() {
           <div className="container-left">
             <VideoDetails videoData={selectedVideo.id} />
             <CommentForm />
-            {/* <Comment comments={currentVideo.comments} /> */}
             <Comment getComment={selectedVideo.id} />
           </div>
 
@@ -82,7 +79,11 @@ function HomePage() {
             <NextVideo
               currentVideoId={currentVideo.id}
               videoData={filteredVideoData} // Pass filteredVideoData instead of videoData
-              onSelectVideo={(videoId) => setSelectedVideo(videoData.find((video) => video.id === videoId))}
+              onSelectVideo={(videoId) =>
+                setSelectedVideo(
+                  videoData.find((video) => video.id === videoId)
+                )
+              }
             />
           </div>
         </div>
@@ -91,6 +92,4 @@ function HomePage() {
   );
 }
 
-
 export default HomePage;
-

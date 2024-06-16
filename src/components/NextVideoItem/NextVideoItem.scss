@@ -33,7 +33,7 @@
     color: $primary-black;
     font-weight: 600;
     flex-grow: 1;
-    
+
     @include tablet {
       max-width: 12rem;
       font-size: 0.9rem;
@@ -46,7 +46,6 @@
   &__channel {
     color: $primary-black;
     font-weight: 400;
-
   }
   &__container {
     display: flex;

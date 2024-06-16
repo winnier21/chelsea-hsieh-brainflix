@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to ="/">
-      <img src={logo} alt="BrainFlix Logo" className="navbar__logo" />
+      <Link to="/">
+        <img src={logo} alt="BrainFlix Logo" className="navbar__logo" />
       </Link>
       <div className="navbar__container">
         <div className="navbar__search--container">
@@ -24,15 +24,15 @@ const Navbar = () => {
         <img src={avatar} alt="User Avatar" className="navbar__avatar" />
       </div>
       <div className="navbar__upload--container">
-      <Link to="/upload" >
-        <div className="navbar__upload--wrapper">
-        <img
-          src={navbarUploadIcon}
-          alt="Upload Icon"
-          className="navbar__upload--icon"
-        />
-        <button className="navbar__upload">UPLOAD</button>
-        </div>
+        <Link to="/upload">
+          <div className="navbar__upload--wrapper">
+            <img
+              src={navbarUploadIcon}
+              alt="Upload Icon"
+              className="navbar__upload--icon"
+            />
+            <button className="navbar__upload">UPLOAD</button>
+          </div>
         </Link>
       </div>
     </nav>
