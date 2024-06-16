@@ -9,9 +9,9 @@ const NextVideoItem = ({
   onSelectVideo,
   currentVideoId,
 }) => {
-  const handleClick = () => {
-    onSelectVideo(id);
-  };
+  // const handleClick = () => {
+  //   onSelectVideo(id);
+  // };
 
   let videoNavCssClass = "video-nav-item";
 
@@ -20,7 +20,7 @@ const NextVideoItem = ({
   }
 
   return (
-    <li className={videoNavCssClass} onClick={handleClick}>
+    <li className={videoNavCssClass} >
       <img
         className="videoNavCssClass__thumbnail"
         src={image}
@@ -35,3 +35,5 @@ const NextVideoItem = ({
 };
 
 export default NextVideoItem;
+
+// onClick={handleClick}

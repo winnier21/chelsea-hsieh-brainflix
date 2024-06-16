@@ -1,7 +1,8 @@
 import React from "react";
 import "./Comment.scss";
 
-const Comment = ({ comments }) => {
+const Comment = ({ comments=[] }) => {
+  console.log(comments)
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
     const day = date.getDate();

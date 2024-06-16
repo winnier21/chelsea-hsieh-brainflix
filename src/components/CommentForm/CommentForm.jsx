@@ -1,7 +1,9 @@
-import React from "react";
+
 import "./CommentForm.scss";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
+import React, { useState } from "react";
+// import api from '../../utils/api';
 
 const CommentForm = () => {
   return (
@@ -34,3 +36,38 @@ const CommentForm = () => {
 };
 
 export default CommentForm;
+// const CommentForm = ({ videoId }) => {
+//   const [name, setName] = useState('');
+//   const [comment, setComment] = useState('');
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     const newComment = {
+//       name,
+//       comment,
+//     };
+
+//     api.post(`/videos/${videoId}/comments`, newComment)
+//       .then(response => {
+//         // Refresh or add the new comment to the state (you can lift state up to App)
+//         console.log("Comment added:", response.data);
+//       })
+//       .catch(error => {
+//         console.error("Error adding comment:", error);
+//       });
+//   };
+
+//   return (
+//     <form className="comment-form" onSubmit={handleSubmit}>
+//       <textarea 
+//         placeholder="Add a public comment..."
+//         value={comment}
+//         onChange={(e) => setComment(e.target.value)}
+//       ></textarea>
+//       <button type="submit">Comment</button>
+//     </form>
+//   );
+// };
+
+// export default CommentForm;
