@@ -11,10 +11,16 @@ const VideoUpload = ({ handleFormSubmit }) => {
   return (
     <div className="upload">
       <h1>Upload Video</h1>
+      <div className ="upload__wrapper">
+      <div className ="upload__wrapper--left">
       <h2>Video Thumbnail</h2>
       <img className="upload__thumbnail" src={videoThumbnail} alt="Video Thumbnail" />
-      <form onSubmit={(e) => handleFormSubmit(e, { title, description })}>
-        <div className="titleVideo">
+      </div>
+
+      
+     
+      <div className="upload__wrapper--right">
+      <div>
           <h2>TITLE YOUR VIDEO</h2>
           <div className="upload__title">
             <input
@@ -27,7 +33,8 @@ const VideoUpload = ({ handleFormSubmit }) => {
             />
           </div>
         </div>
-        <div className="titleVideo">
+
+        <div>
           <h2>ADD A VIDEO DESCRIPTION</h2>
           <div className="upload__description">
             <textarea
@@ -40,7 +47,9 @@ const VideoUpload = ({ handleFormSubmit }) => {
             />
           </div>
         </div>
-
+      </div>
+      </div>
+      <form onSubmit={(e) => handleFormSubmit(e, { title, description })}>
         <div className="publish">
           <button className="publish__button" type="submit">
             <img className="publish__icon" src={uploadIcon} alt="Publish Icon" />
