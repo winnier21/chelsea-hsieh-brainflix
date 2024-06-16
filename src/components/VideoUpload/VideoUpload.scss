@@ -1,0 +1,57 @@
+.upload-video {
+    h1{
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    h2{
+      font-size: 1rem;
+      line-height: 1.25rem;
+      color: $silver;
+    }
+    .thumbnail {
+    
+      max-width: 100%;
+     
+    
+    }
+    .video-title{
+      input{
+        padding: 0.625rem 1.875rem 0.625rem 0.5rem;
+        border: 1px solid $silver;
+        border-radius: 0.3125rem;
+        font-size: 0.8125rem;
+        width: 100%;
+      }
+    }
+    .video-description{
+      input{
+        padding: 0rem 1.875rem 0.625rem 0.5rem;
+        border: 1px solid $silver;
+        border-radius: 0.3125rem;
+        font-size: 0.8125rem;
+        line-height: 8rem;
+        width: 100%;
+      }
+    }
+    
+    .publish {
+      width: 100%;
+      margin:2rem 0;
+    
+    }
+    
+    .cancel-button {
+      width: 100%;
+      background-color: $white;
+      color: $brainflix-blue;
+      border: none;
+      border-radius: 0.3125rem;
+      //padding: 0.625rem 2.5rem;
+      font-size: 0.875rem;
+      position: relative;
+      height: 3rem;
+    }
+    }
+    
+    
+    
