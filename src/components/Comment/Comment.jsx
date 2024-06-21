@@ -1,16 +1,17 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { API_URL, API_KEY } from "../../utils/api.jsx";
+// import { API_URL, API_KEY } from "../../utils/api.jsx";
 import "./Comment.scss";
 
 const Comment = (testId) => {
   const videoId = testId.getComment;
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const baseUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const getComments = async () => {
       try {
-        const res = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`);
+        const res = await axios.get(`${baseUrl}/videos/${videoId}`);
         const selectedVideo = res.data;
         console.log(selectedVideo);
         setSelectedVideo(selectedVideo);

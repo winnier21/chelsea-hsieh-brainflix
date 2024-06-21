@@ -5,7 +5,6 @@ import VideoDetails from "../../components/VideoDetails/VideoDetails.jsx";
 import NextVideo from "../../components/NextVideo/NextVideo.jsx";
 import Comment from "../../components/Comment/Comment.jsx";
 import CommentForm from "../../components/CommentForm/CommentForm.jsx";
-import { API_URL, API_KEY } from "../../utils/api.jsx";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -13,11 +12,12 @@ function HomePage() {
   const [videoData, setVideoData] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const { videoId } = useParams();
+  const baseUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const getVideos = async () => {
       try {
-        const res = await axios.get(`${API_URL}/videos${API_KEY}`);
+        const res = await axios.get(`${baseUrl}/videos`);
 
         const videoData = res.data;
         setVideoData(videoData);
@@ -32,12 +32,12 @@ function HomePage() {
     };
 
     getVideos();
-  }, [videoId]);
+  }, [baseUrl, videoId]);
 
   useEffect(() => {
     const getSelectedVideo = async (videoId) => {
       try {
-        const res = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`);
+        const res = await axios.get(`${baseUrl}/videos/${videoId}`);
         const selectedVideo = res.data;
 
         setSelectedVideo(selectedVideo);
@@ -49,7 +49,7 @@ function HomePage() {
     if (videoId) {
       getSelectedVideo(videoId);
     }
-  }, [videoId]);
+  }, [baseUrl, videoId]);
 
   if (videoData.length === 0) {
     return <p>Loading...</p>;
