@@ -4,6 +4,8 @@ import NextVideoItem from "../NextVideoItem/NextVideoItem";
 import { Link } from "react-router-dom";
 
 const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
+  const baseUrl = import.meta.env.VITE_API_URL;
+ const imageUrl = `${baseUrl}/`;
   return (
     <ul className="nextVideo--list">
       {videoData.map((video) => {
@@ -12,7 +14,7 @@ const NextVideo = ({ onSelectVideo, videoData, currentVideoId }) => {
             <NextVideoItem
               key={video.id}
               id={video.id}
-              image={video.image}
+              image={imageUrl + video.image}
               title={video.title}
               channel={video.channel}
               onSelectVideo={onSelectVideo}
