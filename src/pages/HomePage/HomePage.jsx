@@ -18,7 +18,7 @@ function HomePage() {
     const getVideos = async () => {
       try {
         const res = await axios.get(`${baseUrl}/videos`);
-        console.log(`${baseUrl}/videos/`);
+        // console.log(`${baseUrl}/videos/`);
         const videoData = res.data;
         setVideoData(videoData);
 
@@ -51,11 +51,11 @@ function HomePage() {
     }
   }, [baseUrl, videoId]);
 
-  if (videoData.length === 0) {
+  if (videoData.length === 0 || !selectedVideo) {
     return <p>Loading...</p>;
   }
 
-  const currentVideo = selectedVideo || videoData[0].id; // Use selectedVideo if available, otherwise default to the first video
+  const currentVideo = selectedVideo || videoData[0]; // Use selectedVideo if available, otherwise default to the first video
 
   const filteredVideoData = videoData.filter(
     (video) => video.id !== currentVideo.id
@@ -67,10 +67,19 @@ function HomePage() {
       <div>
         <MainVideo videoData={currentVideo} />
         <div className="outer-container">
-          <div className="container-left">
+          {/* <div className="container-left">
             <VideoDetails videoData={selectedVideo.id} />
             <CommentForm />
             <Comment getComment={selectedVideo.id} />
+          </div> */}
+          <div className="container-left">
+            {selectedVideo && (
+              <>
+                <VideoDetails videoData={selectedVideo} />
+                <CommentForm />
+                <Comment getComment={selectedVideo.id} />
+              </>
+            )}
           </div>
 
           <div className="container-right">

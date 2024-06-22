@@ -3,17 +3,17 @@ import likesIcon from "../../assets/Icons/likes.svg";
 import viewsIcon from "../../assets/Icons/views.svg";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-// import { API_URL, API_KEY } from "../../utils/api.jsx";
 
-const VideoDetails = (testId) => {
-  const videoId = testId.videoData;
+
+const VideoDetails = ({videoData}) => {
+  // const videoId = testId.videoData;
   const [selectedVideo, setSelectedVideo] = useState(null);
   const baseUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const getSelectedVideo = async () => {
       try {
-        const res = await axios.get(`${baseUrl}/videos/${videoId}`);
+        const res = await axios.get(`${baseUrl}/videos/${videoData.id}`);
         const selectedVideo = res.data;
         setSelectedVideo(selectedVideo);
       } catch (error) {
@@ -21,10 +21,10 @@ const VideoDetails = (testId) => {
       }
     };
 
-    if (videoId) {
+    if (videoData?.id) {
       getSelectedVideo();
     }
-  }, [videoId]);
+  }, [videoData]);
 
   if (!selectedVideo) {
     return <p>Loading...</p>;
