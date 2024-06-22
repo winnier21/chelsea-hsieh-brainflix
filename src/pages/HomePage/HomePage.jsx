@@ -18,7 +18,7 @@ function HomePage() {
     const getVideos = async () => {
       try {
         const res = await axios.get(`${baseUrl}/videos`);
-
+        console.log(`${baseUrl}/videos/`);
         const videoData = res.data;
         setVideoData(videoData);
 
