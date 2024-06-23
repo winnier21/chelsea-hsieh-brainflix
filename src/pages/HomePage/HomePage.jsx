@@ -18,7 +18,6 @@ function HomePage() {
     const getVideos = async () => {
       try {
         const res = await axios.get(`${baseUrl}/videos`);
-        // console.log(`${baseUrl}/videos/`);
         const videoData = res.data;
         setVideoData(videoData);
 
@@ -61,12 +60,11 @@ function HomePage() {
     (video) => video.id !== currentVideo.id
   );
 
-
   return (
     <>
       <main>
         <MainVideo videoData={currentVideo} />
-        <section  className="outer-container">
+        <section className="outer-container">
           <div className="container-left">
             {selectedVideo && (
               <>

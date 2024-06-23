@@ -9,7 +9,7 @@ const CommentForm = () => {
       <div className="comment-form__left">
         <img className="comment-form__avatar" src={avatar} alt="avatar" />
       </div>
-      <div className="comment-form__right">
+      <section className="comment-form__right">
         <label htmlFor="comment" className="comment-form__label">
           JOIN THE CONVERSATION
         </label>
@@ -28,7 +28,7 @@ const CommentForm = () => {
             <button className="comment-form__trigger">COMMENT</button>
           </div>
         </div>
-      </div>
+      </section>
     </form>
   );
 };
