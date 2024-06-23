@@ -4,8 +4,7 @@ import viewsIcon from "../../assets/Icons/views.svg";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
-
-const VideoDetails = ({videoData}) => {
+const VideoDetails = ({ videoData }) => {
   // const videoId = testId.videoData;
   const [selectedVideo, setSelectedVideo] = useState(null);
   const baseUrl = import.meta.env.VITE_API_URL;

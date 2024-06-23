@@ -67,11 +67,6 @@ function HomePage() {
       <div>
         <MainVideo videoData={currentVideo} />
         <div className="outer-container">
-          {/* <div className="container-left">
-            <VideoDetails videoData={selectedVideo.id} />
-            <CommentForm />
-            <Comment getComment={selectedVideo.id} />
-          </div> */}
           <div className="container-left">
             {selectedVideo && (
               <>
