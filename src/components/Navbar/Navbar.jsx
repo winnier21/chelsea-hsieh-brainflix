@@ -12,29 +12,29 @@ const Navbar = () => {
       <Link to="/">
         <img src={logo} alt="BrainFlix Logo" className="navbar__logo" />
       </Link>
-      <div className="navbar__container">
+      <section className="navbar__container">
         <div className="navbar__search--container">
           <img
-            className="navbar__search--icon"
+            className="navbar__search-icon"
             src={navBarSearchIcon}
             alt="navbar search icon"
           />
           <input type="text" placeholder="Search" className="navbar__search" />
         </div>
         <img src={avatar} alt="User Avatar" className="navbar__avatar" />
-      </div>
-      <div className="navbar__upload--container">
+      </section>
+      <section className="navbar__upload--container">
         <Link to="/upload">
           <div className="navbar__upload--wrapper">
             <img
               src={navbarUploadIcon}
               alt="Upload Icon"
-              className="navbar__upload--icon"
+              className="navbar__upload-icon"
             />
             <button className="navbar__upload">UPLOAD</button>
           </div>
         </Link>
-      </div>
+      </section>
     </nav>
   );
 };

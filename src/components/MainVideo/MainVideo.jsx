@@ -7,11 +7,11 @@ const MainVideo = ({ videoData }) => {
   const imageUrl = `${baseUrl}/${image}`;
 
   return (
-    <div className="main__video">
+    <main className="main__video">
       <video className="main__video--player" controls poster={imageUrl}>
         <source src={`${baseUrl}/videos/${id}`} type="video/mp4" />
       </video>
-    </div>
+    </main>
   );
 };
 

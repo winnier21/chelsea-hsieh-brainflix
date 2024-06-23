@@ -64,9 +64,9 @@ function HomePage() {
 
   return (
     <>
-      <div>
+      <main>
         <MainVideo videoData={currentVideo} />
-        <div className="outer-container">
+        <section  className="outer-container">
           <div className="container-left">
             {selectedVideo && (
               <>
@@ -90,8 +90,8 @@ function HomePage() {
               }
             />
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

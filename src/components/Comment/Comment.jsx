@@ -37,7 +37,7 @@ const Comment = (testId) => {
     return `${month}/${day}/${year}`;
   };
   return (
-    <div>
+    <main>
       {selectedVideo.comments.map((comment) => (
         <div key={comment.id} className="comment">
           <div className="comment__avatar"></div>
@@ -52,7 +52,7 @@ const Comment = (testId) => {
           </div>
         </div>
       ))}
-    </div>
+    </main>
   );
 };
 

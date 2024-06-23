@@ -41,9 +41,9 @@ const VideoDetails = ({ videoData }) => {
   };
 
   return (
-    <div className="video-details">
+    <main className="video-details">
       <h1 className="video-details__title">{title}</h1>
-      <div className="video-details__data">
+      <section className="video-details__data">
         <div className="video-details__data--left">
           <div className="video-details__creator">
             <p className="video-details__info">By {channel}</p>
@@ -70,10 +70,10 @@ const VideoDetails = ({ videoData }) => {
             <p className="video-details__info">{likes}</p>
           </div>
         </div>
-      </div>
+      </section>
       <p className="video-details__description">{description}</p>
       <h2 className="comment-title">{comments.length} Comments</h2>
-    </div>
+    </main>
   );
 };
 

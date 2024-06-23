@@ -39,8 +39,8 @@ const UploadPage = () => {
       
 
   return (
-    <div className="upload-page">
-      <div className="upload">
+    <main className="upload-page">
+      <section className="upload">
       <h1>Upload Video</h1>
       <div className="upload__wrapper">
         <div className="upload__wrapper--left">
@@ -52,7 +52,7 @@ const UploadPage = () => {
           />
         </div>
 
-        <div className="upload__wrapper--right">
+        <section className="upload__wrapper--right">
           <div>
             <h2>TITLE YOUR VIDEO</h2>
             <div className="upload__title">
@@ -67,7 +67,7 @@ const UploadPage = () => {
             </div>
           </div>
 
-          <div>
+          <section>
             <h2>ADD A VIDEO DESCRIPTION</h2>
             <div className="upload__description">
               <textarea
@@ -78,8 +78,8 @@ const UploadPage = () => {
                 required
               />
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
       </div>
       <form onSubmit= {handleSubmit}>
         <div className="publish">
@@ -100,8 +100,8 @@ const UploadPage = () => {
           </button>
         </div>
       </form>
-    </div>
-    </div>
+    </section>
+    </main>
   );
 };
 
