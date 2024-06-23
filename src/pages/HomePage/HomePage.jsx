@@ -60,7 +60,7 @@ function HomePage() {
   const filteredVideoData = videoData.filter(
     (video) => video.id !== currentVideo.id
   );
-  //console.log(selectedVideo.comments)
+
 
   return (
     <>
